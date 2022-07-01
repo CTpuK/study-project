@@ -21,7 +21,9 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-"use strict";
+(function () {
+    'use strict';
+}());
 
 const numberOfFilms = +prompt("Сколько фильмов Вы уже посмотрели?", "");
 
@@ -34,9 +36,9 @@ const personalMovieDB = {
 };
 
 const lastMovie1 = prompt("Один из последних просмотренных фильмов?", ""),
-      movieRating1 = prompt("На сколько оцените его?", ""),
-      lastMovie2 = prompt("Один из последних просмотренных фильмов?", ""),
-      movieRating2 = prompt("На сколько оцените его?", "");
+    movieRating1 = prompt("На сколько оцените его?", ""),
+    lastMovie2 = prompt("Один из последних просмотренных фильмов?", ""),
+    movieRating2 = prompt("На сколько оцените его?", "");
 
 personalMovieDB.movies[lastMovie1] = movieRating1;
 personalMovieDB.movies[lastMovie2] = movieRating2;
