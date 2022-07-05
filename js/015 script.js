@@ -12,8 +12,6 @@
 
 4) Потренироваться и переписать цикл еще двумя способами*/
 
-
-
 // Код возьмите из предыдущего домашнего задания
 
 (function () {
@@ -30,42 +28,68 @@ const personalMovieDB = {
     privat: false
 };
 
-/* Код с конструкцией if ... else */
+for (let i = 0; i < 2; i++) {
+
+    const lastMovie = prompt("Один из последних просмотренных фильмов?", ""),
+        movieRating = +prompt("На сколько оцените его?", "");
+
+    if (lastMovie != null && movieRating != null && lastMovie != "" && movieRating != "" && lastMovie.length < 50) {
+        personalMovieDB.movies[lastMovie] = movieRating;
+        console.log("done");
+    } else {
+        console.log("error");
+        i--;
+    }
+}
+console.log(personalMovieDB);
 
 if (personalMovieDB.count < 10) {
     alert("Просмотрено довольно мало фильмов");
-} else if (personalMovieDB.count < 30) {
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
     alert("Вы классический зритель");
-} else if (personalMovieDB.count > 30) {
+} else if (personalMovieDB.count >= 30) {
     alert("Вы киноман");
 } else {
     alert("Произошла ошибка");
-} 
+}
 
-/* Код с конструкцией switch */
 
-/* switch (personalMovieDB.count) {
-    case (personalMovieDB.count < 10):
-        alert("Просмотрено довольно мало фильмов");
-        break;
-    case (personalMovieDB.count < 30):
-        alert("Вы классический зритель");
-        break;
-    case (personalMovieDB.count > 30):
-        alert("Вы киноман");
-        break;
-    default:
-        alert("Произошла ошибка");
-} */
+/* let i = 0;
 
-/* const lastMovie1 = prompt("Один из последних просмотренных фильмов?", ""),
-    movieRating1 = prompt("На сколько оцените его?", ""),
-    lastMovie2 = prompt("Один из последних просмотренных фильмов?", ""),
-    movieRating2 = prompt("На сколько оцените его?", "");
+while (i < 2) {
 
-personalMovieDB.movies[lastMovie1] = movieRating1;
-personalMovieDB.movies[lastMovie2] = movieRating2;
+    const lastMovie = prompt("Один из последних просмотренных фильмов?", ""),
+        movieRating = +prompt("На сколько оцените его?", "");
 
-console.log(personalMovieDB);
+    if (lastMovie != null && movieRating != null && lastMovie != "" && movieRating != "" && lastMovie.length < 50) {
+        personalMovieDB.movies[lastMovie] = movieRating;
+        console.log("done");
+    } else {
+        console.log("error");
+        i--;
+    }
+    
+    i++;
+}
 
- */
+console.log(personalMovieDB); */
+
+/* let i = 0;
+do {
+    const lastMovie = prompt("Один из последних просмотренных фильмов?", ""),
+        movieRating = +prompt("На сколько оцените его?", "");
+
+    if (lastMovie != null && movieRating != null && lastMovie != "" && movieRating != "" && lastMovie.length < 50) {
+        personalMovieDB.movies[lastMovie] = movieRating;
+        console.log("done");
+    } else {
+        console.log("error");
+        i--;
+    }
+    i++;
+} while (i < 2);
+
+console.log(personalMovieDB); */
+
+
+
