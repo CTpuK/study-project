@@ -2,24 +2,41 @@
     'use strict';
 }());
 
-let num = 50;
+let num = 30;
 
-/* while (num < 55) {
+function showFirstMessage(text) {
+    console.log(text);
     console.log(num);
-    num++;
+}
+
+showFirstMessage("Hello World");
+console.log(num);
+
+/* console.log(calc(5, 5));
+console.log(calc(3, 6));
+console.log(calc(10, 6));
+
+function calc(a, b) {
+    return (a + b);
 } */
 
-/* do {
-    console.log(num);
-    num++;
-}
-while (num < 55);
- */
+function ret() {
+    let num = 50;
 
-for (let i = 1; i < 10; i++) {
-    if (i === 6) {
-        /*   break; */
-        continue;
-    }
-    console.log(i);
+    return num;
 }
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function () {
+    console.log("Hello!");
+};
+logger();
+
+const calc = (a, b) => {
+    console.log("1");
+    return a + b;
+};
+
+console.log(calc(5, 6));
+
