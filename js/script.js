@@ -2,41 +2,25 @@
     'use strict';
 }());
 
-let num = 30;
+const str = "teSt";
+const arr = [1, 2, 3];
 
-function showFirstMessage(text) {
-    console.log(text);
-    console.log(num);
-}
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str);
 
-showFirstMessage("Hello World");
-console.log(num);
+const fruit = "Some fruit";
+console.log(fruit.indexOf("q"));
 
-/* console.log(calc(5, 5));
-console.log(calc(3, 6));
-console.log(calc(10, 6));
+const logg = "Hello World!";
 
-function calc(a, b) {
-    return (a + b);
-} */
+console.log(logg.slice(6));
 
-function ret() {
-    let num = 50;
+console.log(logg.substring(6, 11));
 
-    return num;
-}
-const anotherNum = ret();
-console.log(anotherNum);
+const num = 12.2;
+console.log(Math.round(num));
 
-const logger = function () {
-    console.log("Hello!");
-};
-logger();
-
-const calc = (a, b) => {
-    console.log("1");
-    return a + b;
-};
-
-console.log(calc(5, 6));
-
+const test = "12.2px";
+console.log(parseInt(test));
+console.log(parseFloat(test));
